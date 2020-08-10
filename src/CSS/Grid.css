@@ -1,0 +1,45 @@
+.grid-container {
+  border: 1px solid red;
+  display: inline-grid;
+  grid:
+    [mcs] 1fr
+    [mce] 1em
+    [ss] 25%
+    [se] /
+    6em 1em 1fr;
+}
+
+.item1 {
+  background-color: brown;
+  color: white;
+}
+
+.item2 {
+  background: green;
+}
+
+.item3 {
+  background: orange;
+  grid-column: mcs / mce;
+}
+
+.media1 {
+  grid-area: title;
+}
+
+.media2 {
+  grid-area: thumbnail;
+}
+
+.media3 {
+  grid-area: content1;
+}
+
+.gc2 {
+  display: inline-grid;
+  grid: 8em 1em 1fr / auto 1em auto;
+  grid-template-areas:
+    "title title title"
+    ". . ."
+    "thumbnail . content1";
+}
