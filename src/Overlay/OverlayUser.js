@@ -10,8 +10,10 @@ export const OverlayUser = () => {
   };
 
   const openModalOverlay = () => {
-    const component = <Wizard title={"Process"} />;
     const overlayAPI = new OnlyOverlay();
+    const component = (
+      <Wizard title={"Process"} closeOverlay={overlayAPI.closeComponent} />
+    );
     overlayAPI.showComponent(component);
   };
 

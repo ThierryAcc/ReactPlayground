@@ -14,14 +14,22 @@ import Flexbox from "./CSS/Flexbox";
 import Grid from "./CSS/Grid";
 import DataFetching from "./Hooks/DataFetching";
 import { OverlayUser } from "./Overlay/OverlayUser";
+import Modal from "./ModalHook/Modal";
+import useModal from "./ModalHook/useModal";
 
 const App = () => {
   const [name, setName] = useState("Thierry");
   const [obj, setObj] = useState({ color: "red" });
+  const { isShowing, toggle } = useModal();
 
   return (
     <div className="App">
       <h2>App</h2>
+
+      <button className="button-default" onClick={toggle}>
+        Show Modal
+      </button>
+      <Modal isShowing={isShowing} hide={toggle} />
 
       <OverlayUser />
 

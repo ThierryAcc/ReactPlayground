@@ -5,6 +5,11 @@ export default class OnlyOverlay extends Component {
   constructor(props) {
     super(props);
 
+    console.log(OnlyOverlay);
+    console.log(typeof OnlyOverlay);
+    console.log(OnlyOverlay.instance);
+    console.log(typeof OnlyOverlay.instance);
+
     if (OnlyOverlay.instance) {
       return OnlyOverlay.instance;
     }
