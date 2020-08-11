@@ -3,7 +3,7 @@ import { Wizard2 } from "./Wizard2";
 import Modal from "./Modal";
 import { ToRender } from "./ToRender";
 
-export const LowerLevelComponent = () => {
+export const AnotherLowLevelCompnent = () => {
   const [wizard, setWizard] = useState(null);
 
   return (
@@ -31,4 +31,4 @@ export const LowerLevelComponent = () => {
   );
 };
 
-export default LowerLevelComponent;
+export default AnotherLowLevelCompnent;

@@ -17,6 +17,7 @@ import { OverlayUser } from "./Overlay/OverlayUser";
 import Modal from "./ModalHook/Modal";
 import useModal from "./ModalHook/useModal";
 import LowerLevelComponent from "./ModalHook/LowerLevelComponent";
+import AnotherLowLevelCompnent from "./ModalHook/AnotherLowLevelCompnent";
 
 const App = () => {
   const [name, setName] = useState("Thierry");
@@ -31,8 +32,9 @@ const App = () => {
         Show Modal
       </button>
       <LowerLevelComponent />
+      <AnotherLowLevelCompnent />
 
-      <Modal isShowing={isShowing} hide={toggle} />
+      <Modal component={<div>from App</div>} />
 
       <OverlayUser />
 
