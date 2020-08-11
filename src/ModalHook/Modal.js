@@ -9,6 +9,14 @@ const Modal = ({ isShowing, hide }) =>
         <>
           <div className="modal-wrapper" tabIndex={-1} role="dialog">
             <div className="modal">
+              <button
+                type="button"
+                className="modal-close-button"
+                data-dismiss="modal"
+                onClick={hide}
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
               <Wizard title={"I am the wizard"} closeOverlay={() => {}} />
             </div>
           </div>

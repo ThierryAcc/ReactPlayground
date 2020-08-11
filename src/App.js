@@ -16,6 +16,7 @@ import DataFetching from "./Hooks/DataFetching";
 import { OverlayUser } from "./Overlay/OverlayUser";
 import Modal from "./ModalHook/Modal";
 import useModal from "./ModalHook/useModal";
+import LowerLevelComponent from "./ModalHook/LowerLevelComponent";
 
 const App = () => {
   const [name, setName] = useState("Thierry");
@@ -29,6 +30,8 @@ const App = () => {
       <button className="button-default" onClick={toggle}>
         Show Modal
       </button>
+      <LowerLevelComponent />
+
       <Modal isShowing={isShowing} hide={toggle} />
 
       <OverlayUser />
